@@ -9,17 +9,20 @@ try:
 except:
     print(error_base_price)
     exit()
+base_price = round(base_price, 2)
 
 #set tax and tip rate
 tax_rate = float(0.085)
 tip_rate = float(0.18)
 
-#calculate tax and tip amount
+#calculate rounded tax and tip amount
 tax_amount = base_price * tax_rate
+rounded_tax_amount = round(tax_amount, 2)
 tip_amount = base_price * tip_rate
+rounded_tip_amount = round(tip_amount, 2)
 
 #calculate total price
-total_price = tax_amount + tip_amount + base_price
+total_price = rounded_tax_amount + rounded_tip_amount + base_price
 
 #print price breakdown
-print(f"Meal: ${base_price}, Tax: ${tax_amount}, Tip: ${tip_amount}, Total: ${total_price}")
+print(f"Meal: ${base_price}, Tax: ${rounded_tax_amount}, Tip: ${rounded_tip_amount}, Total: ${total_price}")
