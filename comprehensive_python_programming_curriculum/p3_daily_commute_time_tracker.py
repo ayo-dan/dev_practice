@@ -24,4 +24,4 @@ final_hour_commute = round(weekly_commute // 60, 2)
 final_minute_commute = round(weekly_commute % 60)
 
 #display commute times
-print(f"Daily commute: {daily_commute} minutes, Weekly commute: {final_hour_commute} hours and {final_minute_commute} minutes")
+print(f"Daily commute: {daily_commute} minutes, Weekly commute: {weekly_commute} minutes ({final_hour_commute} hours and {final_minute_commute} minutes)")
