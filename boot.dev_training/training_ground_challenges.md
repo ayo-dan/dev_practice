@@ -40,3 +40,26 @@ print(median_of_three(-1, -5, -3))
 - **Return exactly one of the inputs**, the one that is in the middle when sorted.
 - **No printing from the function.**
 - **No mutation of inputs.**
+
+# 2. Loop Stats: Sum, Count, Find
+
+Complete the `compute_loop_stats(n, text, target)` function.  
+
+Use **for loops** to compute three results and return them in a tuple, in this order:  
+
+1. The sum of all integers from 1 to `n` (`0` if `n` is 0)  
+2. How many times the character `target` appears in `text`  
+3. The first index of `target` in `text` (0-based), or `-1` if it's not present  
+
+---
+
+### Constraints and Tips:
+- Use a `for` loop with `range()` to sum numbers.  
+- Use a `for` loop to count matches in the string.  
+- Use `enumerate()` to find the first index.  
+- Do not print anything from your function, just return the tuple `(sum_n, count, first_index)`.
+
+---
+
+### Examples
+
