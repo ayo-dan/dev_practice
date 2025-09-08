@@ -62,4 +62,9 @@ Use **for loops** to compute three results and return them in a tuple, in this o
 ---
 
 ### Examples
+a = compute_loop_stats(5, "hello world", "l")
 
+(15, 3, 2)
+b = compute_loop_stats(0, "Boot.dev", "x")
+
+(0, 0, -1)
