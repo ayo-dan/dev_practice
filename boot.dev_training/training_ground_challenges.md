@@ -41,7 +41,7 @@ print(median_of_three(-1, -5, -3))
 - **No printing from the function.**
 - **No mutation of inputs.**
 
-## Guess Steps (While Loop)
+# 2. Guess Steps (While Loop)
 
 Complete the `guess_steps` function.
 
