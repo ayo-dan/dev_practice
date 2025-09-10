@@ -41,7 +41,36 @@ print(median_of_three(-1, -5, -3))
 - **No printing from the function.**
 - **No mutation of inputs.**
 
-# 2. Loop Stats: Sum, Count, Find
+## Guess Steps (While Loop)
+
+Complete the `guess_steps` function.
+
+### Problem Statement
+Given two integers, `secret` and `start`, simulate a simple "guessing" process:
+
+- Start from `start`
+- While the current value is **not equal** to `secret`:
+  - If it's less than `secret`, **increase it by 1**
+  - If it's greater than `secret`, **decrease it by 1**
+  - **Count how many steps** it takes to reach `secret`
+- Return the step count
+
+#### Requirements
+- Use a `while` loop to move the value one step toward `secret` each iteration
+- Use comparisons and an `if/else` to decide whether to increment or decrement
+- If `start == secret`, return `0`
+
+---
+
+### Example Usage
+print(guess_steps(10, 7))
+
+Output: 3 # (7 -> 8 -> 9 -> 10)
+print(guess_steps(-5, 2))
+
+Output: 7 # (2 -> 1 -> 0 -> -1 -> -2 -> -3 -> -4 -> -5)
+
+# 3. Loop Stats: Sum, Count, Find
 
 Complete the `compute_loop_stats(n, text, target)` function.  
 
