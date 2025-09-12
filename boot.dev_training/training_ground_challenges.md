@@ -70,30 +70,32 @@ print(guess_steps(-5, 2))
 
 Output: 7 # (2 -> 1 -> 0 -> -1 -> -2 -> -3 -> -4 -> -5)
 
-# 3. Loop Stats: Sum, Count, Find
+# 3. Fix Consecutive Run Compression
 
-Complete the `compute_loop_stats(n, text, target)` function.  
+You're building a simple log compressor for a retro game. The `compress_runs` function should compress a list into counts of consecutive duplicates.
 
-Use **for loops** to compute three results and return them in a tuple, in this order:  
-
-1. The sum of all integers from 1 to `n` (`0` if `n` is 0)  
-2. How many times the character `target` appears in `text`  
-3. The first index of `target` in `text` (0-based), or `-1` if it's not present  
-
----
-
-### Constraints and Tips:
-- Use a `for` loop with `range()` to sum numbers.  
-- Use a `for` loop to count matches in the string.  
-- Use `enumerate()` to find the first index.  
-- Do not print anything from your function, just return the tuple `(sum_n, count, first_index)`.
-
----
+**Expected behavior:**  
+Return a list of `[value, count]` pairs for each consecutive run.
 
 ### Examples
-a = compute_loop_stats(5, "hello world", "l")
+compress_runs([1, 1, 2, 2, 2, 3])
+# [[1, 2], [2, 3], [3, 1]]
 
-(15, 3, 2)
-b = compute_loop_stats(0, "Boot.dev", "x")
+compress_runs(["a", "a", "a", "b", "b", "a"])
+# [["a", 3], ["b", 2], ["a", 1]]
 
-(0, 0, -1)
+### What's Wrong Now
+
+The buggy implementation counts all occurrences of a value in the entire list instead of counting only consecutive runs. This merges separate runs incorrectly and skips positions incorrectly.
+
+### Your Task
+
+- Iterate through the list once.
+- Track the current value and how many times it repeats consecutively.
+- When the value changes, append `[value, count]` to the result and reset the counter.
+- Handle edge cases like empty lists and single-element lists.
+
+**Notes:**
+- Only use lists and loops. Don't use dictionaries or sets.
+- Preserve the original order of runs.
+
